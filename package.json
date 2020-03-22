@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "cd react && yarn build && cd .. && node server/index.js",
-    "dev": "nodemon server & cd react && yarn start"
+    "start": "node server/index.js",
+    "dev": "nodemon server & cd react && yarn start",
+    "build": "cd react/ && yarn install && yarn build"
   },
   "dependencies": {
     "@types/node": "^13.9.3",
