@@ -1,0 +1,13 @@
+{
+  "name": "bund",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd react && yarn build && cd .. && node server/index.js",
+    "dev": "nodemon server & cd react && yarn start"
+  },
+  "dependencies": {
+    "@types/node": "^13.9.3",
+    "express": "^4.17.1"
+  }
+}
