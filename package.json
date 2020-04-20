@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node server/index.js",
     "dev": "nodemon server & cd react && yarn start",
-    "build": "cd react/ && yarn install && yarn build"
+    "build": "yarn install && cd react/ && yarn install && yarn build"
   },
   "dependencies": {
     "@types/node": "^13.9.3",
