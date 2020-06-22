@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const cluster = require('cluster');
 const numCPUs = require('os').cpus().length;
+const cors = require('cors')
 
 
 const isDev = process.env.NODE_ENV !== 'production';
@@ -22,6 +23,7 @@ if (!isDev && cluster.isMaster) {
 
 } else {
     const app = express();
+    app.use(cors());
 
     // Priority serve any static files.
     app.use(express.static(path.resolve(__dirname, '../react/build')));
